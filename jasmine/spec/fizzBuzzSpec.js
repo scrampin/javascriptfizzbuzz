@@ -18,4 +18,34 @@ describe("FizzBuzz", function() {
 
   });
 
+  describe("multiples of 5", function() {
+
+    it("buzzes when input is divisible by 5", function() {
+      expect(fizzBuzz.play(5)).toEqual('Buzz');
+    });
+
+    it("buzzes for 10", function() {
+      expect(fizzBuzz.play(10)).toEqual('Buzz');
+    });
+
+  });
+
+  describe("multiples of 15", function() {
+
+    it("fizzbuzzes when input is divisible by 15", function() {
+      expect(fizzBuzz.play(15)).toEqual('FizzBuzz');
+    });
+
+    it("fizzbuzzes for 30", function() {
+      expect(fizzBuzz.play(30)).toEqual('FizzBuzz');
+    });
+
+  });
+
+  describe("returns number when not divisible by 3 or 5", function() {
+    it("returns 2 when given 2", function() {
+      expect(fizzBuzz.play(2)).toEqual(2);
+    });
+  });
+
 })
